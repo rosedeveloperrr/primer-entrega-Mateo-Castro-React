@@ -1,11 +1,14 @@
+import CartWidget from './CartWidget.jsx'
+
 function Navbar () {
   return (
-    <nav>
-      <h1>Tienda360</h1>
+    <nav className = 'navbar'>
+      <h1 className = 'logo'>Tienda360</h1>
       <ul>
-        <li>Keyboards</li>
+        <li>Teclados</li>
         <li>Mouses</li>
       </ul>
+      <CartWidget />
     </nav>
   )
 }
