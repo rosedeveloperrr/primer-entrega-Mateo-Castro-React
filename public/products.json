@@ -1,0 +1,172 @@
+[
+  {
+    "id": "1",
+    "nombre": "Coca Cola",
+    "precio": 1200,
+    "presentacion": "1.5L",
+    "img": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg?semt=ais_hybrid&w=740&q=80",
+    "categoria": "bebidas"
+  },
+  {
+    "id": "2",
+    "nombre": "Pepsi",
+    "precio": 1100,
+    "presentacion": "1.5L",
+    "img": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg?semt=ais_hybrid&w=740&q=80",
+    "categoria": "bebidas"
+  },
+  {
+    "id": "3",
+    "nombre": "Agua Mineral Villavicencio",
+    "precio": 650,
+    "presentacion": "2L",
+    "img": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg?semt=ais_hybrid&w=740&q=80",
+    "categoria": "bebidas"
+  },
+  {
+    "id": "4",
+    "nombre": "Jugo Tang Naranja",
+    "precio": 350,
+    "presentacion": "25g",
+    "img": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg?semt=ais_hybrid&w=740&q=80",
+    "categoria": "bebidas"
+  },
+  {
+    "id": "5",
+    "nombre": "Speed Energy",
+    "precio": 900,
+    "presentacion": "473ml",
+    "img": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg?semt=ais_hybrid&w=740&q=80",
+    "categoria": "bebidas"
+  },
+  {
+    "id": "6",
+    "nombre": "Fanta",
+    "precio": 1100,
+    "presentacion": "1.5L",
+    "img": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg?semt=ais_hybrid&w=740&q=80",
+    "categoria": "bebidas"
+  },
+  {
+    "id": "7",
+    "nombre": "Sprite",
+    "precio": 1150,
+    "presentacion": "1.5L",
+    "img": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg?semt=ais_hybrid&w=740&q=80",
+    "categoria": "bebidas"
+  },
+
+  {
+    "id": "8",
+    "nombre": "Doritos Nacho",
+    "precio": 950,
+    "presentacion": "90g",
+    "img": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg?semt=ais_hybrid&w=740&q=80",
+    "categoria": "snacks"
+  },
+  {
+    "id": "9",
+    "nombre": "Papas Lays Clásicas",
+    "precio": 1200,
+    "presentacion": "85g",
+    "img": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg?semt=ais_hybrid&w=740&q=80",
+    "categoria": "snacks"
+  },
+  {
+    "id": "10",
+    "nombre": "Bizcochitos Don Satur",
+    "precio": 800,
+    "presentacion": "200g",
+    "img": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg?semt=ais_hybrid&w=740&q=80",
+    "categoria": "snacks"
+  },
+  {
+    "id": "11",
+    "nombre": "Maní Salado",
+    "precio": 700,
+    "presentacion": "100g",
+    "img": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg?semt=ais_hybrid&w=740&q=80",
+    "categoria": "snacks"
+  },
+  {
+    "id": "12",
+    "nombre": "Chizitos Dequeso",
+    "precio": 600,
+    "presentacion": "80g",
+    "img": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg?semt=ais_hybrid&w=740&q=80",
+    "categoria": "snacks"
+  },
+  {
+    "id": "13",
+    "nombre": "Galletitas Oreo",
+    "precio": 900,
+    "presentacion": "118g",
+    "img": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg?semt=ais_hybrid&w=740&q=80",
+    "categoria": "snacks"
+  },
+  {
+    "id": "14",
+    "nombre": "Gomitas Mogul",
+    "precio": 750,
+    "presentacion": "100g",
+    "img": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg?semt=ais_hybrid&w=740&q=80",
+    "categoria": "snacks"
+  },
+
+  {
+    "id": "15",
+    "nombre": "Detergente Ala",
+    "precio": 1500,
+    "presentacion": "750ml",
+    "img": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg?semt=ais_hybrid&w=740&q=80",
+    "categoria": "limpieza"
+  },
+  {
+    "id": "16",
+    "nombre": "Lavandina Ayudín",
+    "precio": 900,
+    "presentacion": "1L",
+    "img": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg?semt=ais_hybrid&w=740&q=80",
+    "categoria": "limpieza"
+  },
+  {
+    "id": "17",
+    "nombre": "Desodorante Poett",
+    "precio": 1300,
+    "presentacion": "900ml",
+    "img": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg?semt=ais_hybrid&w=740&q=80",
+    "categoria": "limpieza"
+  },
+  {
+    "id": "18",
+    "nombre": "Esponja para Cocina",
+    "precio": 300,
+    "presentacion": "2 unidades",
+    "img": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg?semt=ais_hybrid&w=740&q=80",
+    "categoria": "limpieza"
+  },
+  {
+    "id": "19",
+    "nombre": "Jabón en Polvo Ala",
+    "precio": 2500,
+    "presentacion": "800g",
+    "img": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg?semt=ais_hybrid&w=740&q=80",
+    "categoria": "limpieza"
+  },
+  {
+    "id": "20",
+    "nombre": "Desengrasante Mr. Músculo",
+    "precio": 1700,
+    "presentacion": "500ml",
+    "img": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg?semt=ais_hybrid&w=740&q=80",
+    "categoria": "limpieza"
+  },
+  {
+    "id": "21",
+    "nombre": "Limpiador Multiuso CIF",
+    "precio": 1600,
+    "presentacion": "750ml",
+    "img": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg?semt=ais_hybrid&w=740&q=80",
+    "categoria": "limpieza"
+  }
+]
