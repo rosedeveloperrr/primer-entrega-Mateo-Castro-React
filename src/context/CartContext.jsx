@@ -1,51 +1,56 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useState, useContext } from "react";
 
 const CartContext = createContext();
 
-export function useCart() {
-  return useContext(CartContext);
-}
-
 export function CartProvider({ children }) {
-  const [carrito, setCarrito] = useState([]);
+  const [cart, setCart] = useState([]);
 
-  const addItem = (producto, cantidad) => {
-    setCarrito(prev => {
-      const existe = prev.find(item => item.id === producto.id);
+  // Agregar producto
+  const addToCart = (item, cantidad) => {
+    const existe = cart.find(p => p.id === item.id);
+    
+    // Validar stock
+    if (existe) {
+        const nuevaCantidad = existe.cantidad + cantidad;
+        if (nuevaCantidad > item.stock) {
+        alert(`No hay suficiente stock. Disponible: ${item.stock}`);
+        return;
+        }
+        setCart(cart.map(p =>
+        p.id === item.id
+            ? { ...p, cantidad: nuevaCantidad }
+            : p
+        ));
+    } else {
+        if (cantidad > item.stock) {
+        alert(`No hay suficiente stock. Disponible: ${item.stock}`);
+        return;
+        }
+        setCart([...cart, { ...item, cantidad }]);
+    }
+};
 
-      if (existe) {
-        // si ya estaba, sumo cantidades
-        return prev.map(item =>
-          item.id === producto.id
-            ? { ...item, cantidad: item.cantidad + cantidad }
-            : item
-        );
-      }
-
-      return [...prev, { ...producto, cantidad }];
-    });
-  };
-
+  // Eliminar un producto
   const removeItem = (id) => {
-    setCarrito(prev => prev.filter(item => item.id !== id));
+    setCart(cart.filter(p => p.id !== id));
   };
 
-  const clear = () => {
-    setCarrito([]);
-  };
+  // Vaciar carrito
+  const clearCart = () => setCart([]);
 
-  const totalQuantity = carrito.reduce((acc, item) => acc + item.cantidad, 0);
+  // Cantidad total de items
+  const totalItems = cart.reduce((acc, p) => acc + p.cantidad, 0);
 
-  const totalPrice = carrito.reduce(
-    (acc, item) => acc + item.precio * item.cantidad,
-    0
-  );
+  // Total en $
+  const totalPrice = cart.reduce((acc, p) => acc + p.cantidad * p.precio, 0);
 
   return (
-    <CartContext.Provider
-      value={{ carrito, addItem, removeItem, clear, totalQuantity, totalPrice }}
-    >
+    <CartContext.Provider value={{ cart, addToCart, removeItem, clearCart, totalItems, totalPrice }}>
       {children}
     </CartContext.Provider>
   );
+}
+
+export function useCart() {
+  return useContext(CartContext);
 }

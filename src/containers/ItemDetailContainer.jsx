@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { getProductById } from "../services/productsService"
+import { getProductById } from "../services/firebaseProducts";
 import ItemDetail from "../components/ItemDetail"
 
 function ItemDetailContainer() {

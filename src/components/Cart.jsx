@@ -3,9 +3,9 @@ import { useCart } from "../context/CartContext";
 import CartItem from "./CartItem";
 
 function Cart() {
-  const { carrito, totalPrice, clear } = useCart();
+  const { cart, totalPrice, clearCart } = useCart();
 
-  if (carrito.length === 0) {
+  if (cart.length === 0) {
     return (
       <div style={{ padding: 20 }}>
         <h2>Carrito vacío</h2>
@@ -18,13 +18,13 @@ function Cart() {
     <div style={{ padding: 20 }}>
       <h2>Carrito</h2>
 
-      {carrito.map(item => (
+      {cart.map(item => (
         <CartItem key={item.id} item={item} />
       ))}
 
       <h3>Total: ${totalPrice}</h3>
 
-      <button onClick={clear}>Vaciar carrito</button>
+      <button onClick={clearCart}>Vaciar carrito</button>
 
       <br /><br />
 

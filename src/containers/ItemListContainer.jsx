@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-import { getProducts } from "../services/productsService"
+import { getProducts } from "../services/firebaseProducts";
 import ItemList from "../components/ItemList"
+
+
 
 function ItemListContainer() {
 

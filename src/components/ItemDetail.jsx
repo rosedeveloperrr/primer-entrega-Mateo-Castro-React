@@ -1,10 +1,13 @@
 import ItemCount from "./ItemCount"
+import { useCart } from "../context/CartContext"
 
 function ItemDetail({ producto }) {
 
+  const { addToCart } = useCart();
+
   const onAdd = (cantidad) => {
-    console.log("Agregar", cantidad)
-  }
+    addToCart(producto, cantidad);
+  };
 
   return (
     <div style={{ display: "flex", gap: 20 }}>
@@ -14,7 +17,7 @@ function ItemDetail({ producto }) {
         <h3>{producto.presentacion}</h3>
         <p>${producto.precio}</p>
 
-        <ItemCount stock={10} initial={1} onAdd={onAdd} />
+        <ItemCount stock={producto.stock} initial={1} onAdd={onAdd} />
       </div>
     </div>
   )

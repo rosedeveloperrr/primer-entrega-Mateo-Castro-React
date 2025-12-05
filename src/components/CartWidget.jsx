@@ -1,23 +1,33 @@
-import { Link } from "react-router-dom";
-import { useCart } from "../context/CartContext";
+import { useCart } from "../context/CartContext"
+import { Link } from "react-router-dom"
 
 function CartWidget() {
-  const { totalQuantity } = useCart();
+  const { totalItems } = useCart();
 
   return (
-    <Link to="/cart" className="cart-widget" style={{ display: "flex", alignItems: "center", gap: 8 }}>
-      <img
-        src="https://cdn-icons-png.flaticon.com/512/263/263142.png"
-        alt="Carrito"
-        style={{ width: 30 }}
-      />
-      
-      {/* Muestra solo si hay productos */}
-      {totalQuantity > 0 && (
-        <span id="cart-counter">{totalQuantity}</span>
-      )}
+    <Link to="/cart" style={{ textDecoration: "none", color: "inherit" }}>
+      <div className='cart-widget' style={{ position: "relative" }}>
+        <img src='../src/assets/shopping-cart.svg' alt="" id='shopping-cart' />
+
+        {totalItems > 0 && (
+          <span
+            style={{
+              position: "absolute",
+              top: -5,
+              right: -10,
+              background: "red",
+              color: "white",
+              borderRadius: "50%",
+              padding: "3px 7px",
+              fontSize: 12
+            }}
+          >
+            {totalItems}
+          </span>
+        )}
+      </div>
     </Link>
-  );
+  )
 }
 
-export default CartWidget;
+export default CartWidget

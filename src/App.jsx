@@ -2,6 +2,7 @@ import './App.css'
 import Navbar from './components/Navbar.jsx'
 import Cart from "./components/Cart.jsx";
 import CheckoutForm from "./components/CheckoutForm.jsx";
+import Checkout from "./pages/Checkout";
 import { Routes, Route } from "react-router-dom"
 
 // Contenedores
@@ -33,7 +34,9 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         
         {/* Checkout */}
-        <Route path="/checkout" element={<CheckoutForm />} />
+
+        <Route path="/checkout" element={<Checkout />} />
+
 
         {/* 404 */}
         <Route path="*" element={<NotFound />} />
