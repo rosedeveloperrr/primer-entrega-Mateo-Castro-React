@@ -1,16 +1,62 @@
-# React + Vite
+# 🛒 E-commerce React + Firebase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyecto final del curso de React (CoderHouse).  
+Aplicación e-commerce desarrollada con React, Firebase y React Router.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologías utilizadas
 
-## React Compiler
+- **React**
+- **React Router**
+- **Firebase Firestore**
+- **Context API (Carrito global)**
+- **Vite**
+- **CSS puro**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📦 Funcionalidades principales
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### ✔ Catálogo de productos
+- Listado dinámico desde Firestore.
+- Filtrado por categorías (bebidas, snacks, limpieza).
+- Vista en detalle de cada producto.
+
+### ✔ Carrito de compras
+- Implementado con **Context API**.
+- Agregar productos con la cantidad seleccionada.
+- Mostrar subtotal, total y cantidad total.
+- Eliminar productos o vaciar carrito.
+
+### ✔ Checkout
+- Formulario para ingresar datos del comprador.
+- Generación de orden en Firestore (colección **orders**).
+- Fecha automática con `serverTimestamp()`.
+- Muestra el **ID de orden** al finalizar.
+
+### ✔ Navegación
+- SPA completa sin recargas.
+- Rutas:
+  - `/`
+  - `/categoria/:id`
+  - `/producto/:id`
+  - `/cart`
+  - `/checkout`
+  - `*` (404)
+
+---
+
+## 🗄 Estructura de Firestore
+
+### Colección: **products**
+Cada documento contiene:
+
+```json
+{
+  "nombre": "Coca Cola",
+  "precio": 1200,
+  "categoria": "bebidas",
+  "img": "URL",
+  "stock": 10
+}
