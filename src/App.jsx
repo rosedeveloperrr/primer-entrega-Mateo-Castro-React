@@ -1,10 +1,14 @@
 import './App.css'
 import Navbar from './components/Navbar.jsx'
+import Cart from "./components/Cart.jsx";
+import CheckoutForm from "./components/CheckoutForm.jsx";
 import { Routes, Route } from "react-router-dom"
 
 // Contenedores
 import ItemListContainer from './containers/ItemListContainer.jsx'
 import ItemDetailContainer from './containers/ItemDetailContainer.jsx'
+
+
 
 // 404
 const NotFound = () => <h2 style={{ padding: 20 }}>404 - Página no encontrada</h2>
@@ -24,6 +28,12 @@ function App() {
 
         {/* Detalle */}
         <Route path="/producto/:id" element={<ItemDetailContainer />} />
+
+        {/* Rutas del carrito */}
+        <Route path="/cart" element={<Cart />} />
+        
+        {/* Checkout */}
+        <Route path="/checkout" element={<CheckoutForm />} />
 
         {/* 404 */}
         <Route path="*" element={<NotFound />} />
